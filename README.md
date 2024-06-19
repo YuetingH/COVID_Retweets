@@ -22,8 +22,8 @@ COVID_Retweets
 ¦   ¦   G_filtered_sub1.gpickle                     # filtered subgraph (5 months: 2020-11-17 to 2021-04-17)
 ¦   ¦   G_filtered_sub2.gpickle                     # filtered subgraph (5 months: 2021-11-17 to 2022-04-17)
 ¦   ¦   newsCateogry_dict_decode.pickle             # for retrieving retweets' cateogories (converted into integers when constructing graphs to save storage)
-¦   ¦   newsCateogry_dict_generalised_code.pickle   # code of generalised cateogories 'scientific', 'fake', 'uncertain'
-¦   ¦   user_dict_decode.pickle                     # for retrieving users' ID 
+¦   ¦   newsCateogry_dict_generalised_code.pickle   # for generalising cateogories into 'scientific', 'fake', 'uncertain' 
+¦   ¦   user_dict_decode.pickle                     # for retrieving users' IDs (converted into integers when constructing graphs to save storage)
 ¦
 +--- Results (not public available)                 # store some time-consuming results
 ¦   ¦   ... 
