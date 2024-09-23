@@ -7,7 +7,7 @@ COVID_Retweets
 ¦   requirements.txt
 ¦   1_Graph_Filter_vs_Unfiltered.ipynb              # Fig 1 in paper
 ¦   2_Retweets_vs_Followers.ipynb                   # Fig 2 & 3
-¦   3_Temporal_Bowtie.ipynb                         # Fig 4 & 6
+¦   3_Temporal_Bowtie.ipynb                         # Fig 4 & 5
 ¦   Graph_Demo.ipynb                                # instructions: import & extract temporal (sub)graphs
 ¦   SM_Data_Import+Cleaning+SummaryStats.ipynb      # SM: original retweet data preprocessing
 ¦
