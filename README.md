@@ -28,29 +28,26 @@ The early stage of this dataset has been studied in prior work — [Gallotti et 
 
 ```bash
 COVID_Retweets    
+¦  README.md   
+¦  requirements.txt
+¦  graph_demo.ipynb                             # instructions: import & extract temporal (sub)graphs
+¦
 ¦  1_graph_filter_vs_unfiltered.ipynb           # Fig 1 in paper
 ¦  2_retweets_vs_followers.ipynb                # Fig 2 & 3
 ¦  3.1_epiSim_1month.ipynb                      # Fig 4a
 ¦  3.2_epiSim_3month.ipynb                      # Fig 4b
 ¦  3.3_epiSim_6month.ipynb                      # Fig 4c
 ¦  3.4_epiSim_para.ipynb                        # Fig 4d
-¦  graph_demo.ipynb                             # instructions: import & extract temporal (sub)graphs
-¦  README.md   
-¦  requirements.txt
+¦
 ¦  SM1_dataCleaning.ipynb                       # process raw data
 ¦  SM2_graphGen.ipynb                           # generate graphs from raw data
 ¦  SM3_dispFilter.ipynb                         # SM figures
 ¦
-+--- figures
-¦   ¦  ... 
-¦
-+--- results (not publicly available)           # store some time-consuming results
-¦   ¦  ...
-¦
 +--- data (only tweet IDs publicly available)
 ¦   ¦  covid19_infodemic_RT_en.dat              # raw data
 ¦   ¦  dataCleaning_indexRetain.pickle  
-¦   ¦  tweetID_clean.zip                        # tweetID .csv (compressed)                                         
+¦   ¦  tweetID_clean.zip                        # tweetID .csv (compressed)  
+¦   ¦                                       
 ¦   +--- mappingID                              # encode characters into integers (to save computation resources)
 ¦   ¦   ¦  newsCateogry_dict_decode.pickle
 ¦   ¦   ¦  newsCateogry_dict_generalised_code.pickle
@@ -60,6 +57,12 @@ COVID_Retweets
 ¦       ¦  G_origial.gpickle
 ¦       ¦  G_origial_unattributed.gpickle       # an unattributed version for faster loading
 ¦       ¦  G_filtered.gpickle                   # attributed filtered network
+¦
++--- figures
+¦   ¦  ... 
+¦
++--- results (not publicly available)           # store some time-consuming results
+¦   ¦  ...
 
 ```
 
