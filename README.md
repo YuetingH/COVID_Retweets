@@ -1,38 +1,67 @@
 # COVID_Retweets
+This repo documents the programming code used in our manuscript "Measuring the co-evolution of online engagement with (mis)information and its visibility at scale", authored by Yueting Han, Marya Bazzi, Paolo Turrini, Giulia Andrighetto, Eugenia Polizzi, Manlio De
+Domenico. 
+
+The dataset used in this study cannot be made publicly available due to privacy regulations. 
+However, we provide the tweet IDs of the collected data, allowing anyone to retrieve the tweets directly via Twitter's API. 
+Alternatively, the full dataset can be obtained from the corresponding authors upon reasonable request.
+
+<br/>
+
+## Dataset
+
+In this paper, we measure the co-evolution of online engagement with (mis)information and its visibility, where user interactions on social media indicate engagement, and visibility by fluctuations in user follower counts. 
+
+Our investigation into the co-evolution of interactions and follower growth is anchored on a Twitter (now "X") dataset that contains around 113.7 million retweets, collected second-by-second from 17 March 2020 to 12 February 2023, across countries with all content in English. These retweets are identified as being related to COVID-19, and each is classified into one of three types: factual (36.9%), misleading (7.7%) and uncertain (55.4%). Approximately 13.9 million users are involved, either retweeting or being retweeted, with an estimated total follower count of 28.3 billion at the start (17 March 2020) and 32.4 billion at the end (12 February 2023) of the dataset.
+
+The early stage of this dataset has been studied in prior work — [Gallotti et al.](https://www.nature.com/articles/s41562-020-00994-6) (January - March 2020), [Castioni et al.](https://royalsocietypublishing.org/doi/full/10.1098/rsos.220716) (January - May 2020), which explore alternative aspects using less granular metadata. We collect this three-year dataset following their approaches, extending their annotations and time span beyond the early stages. 
+
+
+<figure style="text-align: center;">
+  <img src="figures/fig3.png" style="width:700px;">
+  <figcaption><strong>Figure 3: Retweet vs follower count variations by category.</strong> We track variations in follower counts for each campaign (factual, misleading, uncertain), in contrast to their daily retweet counts. The timeline above presents COVID-related events that can be relevant to these fluctuations.</figcaption>
+</figure>
+
+<br/>
 
 ## Repo Structure
-```bash
-COVID_Retweets
-¦   README.md   
-¦   requirements.txt
-¦   1_Graph_Filter_vs_Unfiltered.ipynb              # Fig 1 in paper
-¦   2_Retweets_vs_Followers.ipynb                   # Fig 2 & 3
-¦   3_Temporal_Bowtie.ipynb                         # Fig 4 & 5
-¦   Graph_Demo.ipynb                                # instructions: import & extract temporal (sub)graphs
-¦   SM_Data_Import+Cleaning+SummaryStats.ipynb      # SM: original retweet data preprocessing
-¦
-+--- Data (not public available)
-¦   ¦   original_data.dat
-¦   ¦   dataCleaning_indexRetain.pickle
-¦
-+--- Graphs (not public available)
-¦   ¦   G_original.gpickle                          # the original network aggregating the entire data timeframe - a directed weighted network with attributes
-¦   ¦   G_original_unattributed                     # an unattributed version for faster loading
-¦   ¦   G_filtered.gpickle                          # filtering the original network by retaining statistically significant edges only
-¦   ¦   G_filtered_sub1.gpickle                     # filtered subgraph (6 months: 2020-09-17 to 2021-03-17)
-¦   ¦   G_filtered_sub2.gpickle                     # filtered subgraph (6 months: 2021-11-17 to 2022-05-17)
-¦   ¦   newsCateogry_dict_decode.pickle             # for retrieving retweets' cateogories (converted into integers when constructing graphs to save storage)
-¦   ¦   newsCateogry_dict_generalised_code.pickle   # for generalising cateogories into 'scientific', 'fake', 'uncertain' 
-¦   ¦   user_dict_decode.pickle                     # for retrieving users' IDs (converted into integers when constructing graphs to save storage)
-¦
-+--- Results (not public available)                 # store some time-consuming results
-¦   ¦   ... 
-¦
-+--- Figures
-¦   ¦   ...                                         
-             
-```
 
+```bash
+COVID_Retweets    
+¦  1_graph_filter_vs_unfiltered.ipynb           # Fig 1 in paper
+¦  2_retweets_vs_followers.ipynb                # Fig 2 & 3
+¦  3.1_epiSim_1month.ipynb                      # Fig 4a
+¦  3.2_epiSim_3month.ipynb                      # Fig 4b
+¦  3.3_epiSim_6month.ipynb                      # Fig 4c
+¦  3.4_epiSim_para.ipynb                        # Fig 4d
+¦  graph_demo.ipynb                             # instructions: import & extract temporal (sub)graphs
+¦  README.md   
+¦  requirements.txt
+¦  SM1_dataCleaning.ipynb                       # process raw data
+¦  SM2_graphGen.ipynb                           # generate graphs from raw data
+¦  SM3_dispFilter.ipynb                         # SM figures
+¦
++--- figures
+¦   ¦  ... 
+¦
++--- results (not publicly available)           # store some time-consuming results
+¦   ¦  ...
+¦
++--- data (only tweet IDs publicly available)
+¦   ¦  covid19_infodemic_RT_en.dat              # raw data
+¦   ¦  dataCleaning_indexRetain.pickle  
+¦   ¦  tweetID_clean.zip                        # tweetID .csv (compressed)                                         
+¦   +--- mappingID                              # encode characters into integers (to save computation resources)
+¦   ¦   ¦  newsCateogry_dict_decode.pickle
+¦   ¦   ¦  newsCateogry_dict_generalised_code.pickle
+¦   ¦   ¦  user_dict_decode.pickle
+¦   ¦
+¦   +--- graphs                                     
+¦       ¦  G_origial.gpickle
+¦       ¦  G_origial_unattributed.gpickle       # an unattributed version for faster loading
+¦       ¦  G_filtered.gpickle                   # attributed filtered network
+
+```
 
 
 
