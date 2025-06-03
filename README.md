@@ -1,5 +1,5 @@
 # COVID_Retweets
-This repo documents the programming code used in our manuscript "Measuring the co-evolution of online engagement with (mis)information and its visibility at scale", authored by Yueting Han, Marya Bazzi, Paolo Turrini, Giulia Andrighetto, Eugenia Polizzi, Manlio De
+This repo documents the programming code used in our manuscript "Measuring the co-evolution of online engagement with (mis)information and its visibility at scale", authored by Yueting Han, Paolo Turrini, Marya Bazzi, Giulia Andrighetto, Eugenia Polizzi, Manlio De
 Domenico. 
 
 The dataset used in this study cannot be made publicly available due to privacy regulations. 
