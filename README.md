@@ -1,6 +1,6 @@
 # COVID_Retweets
 This repo documents the programming code used in our manuscript "[Measuring the co-evolution of online engagement with (mis)information and its visibility at scale](https://arxiv.org/pdf/2506.06106)", authored by Yueting Han, Paolo Turrini, Marya Bazzi, Giulia Andrighetto, Eugenia Polizzi, and Manlio De
-Domenico (2025). 
+Domenico (Preprint, 2025). 
 
 The dataset used in this study cannot be made publicly available due to privacy regulations. 
 However, we provide the tweet IDs of the collected data, allowing anyone to retrieve the tweets directly via Twitter's API. 
