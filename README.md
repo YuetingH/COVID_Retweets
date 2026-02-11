@@ -43,7 +43,10 @@ COVID_Retweets
 ¦
 ¦  SM1_dataCleaning.ipynb                       # process raw data
 ¦  SM2_graphGen.ipynb                           # generate graphs from raw data
-¦  SM3_dispFilter.ipynb                         # SM figures
+¦  SM3_dispFilter.ipynb                         # SM A
+¦  SM4_altDef_creators_consumers.ipynb          # SM C
+¦  SM5.1_FJSim_S1_1month.ipynb                  # SM E
+¦  SM5.2_FJSim_S2_1month.ipynb
 ¦
 +--- data (only tweet IDs publicly available)
 ¦   ¦  covid19_infodemic_RT_en.dat              # raw data
